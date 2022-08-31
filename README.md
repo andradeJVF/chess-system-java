@@ -26,6 +26,17 @@ Métodos e Classes abstratas.<br>
 - Implementado sistema de Xeque e Xeque-mate de acordo com as jogadas possíveis no tabuleiro;
 - Implementado sistema de captura de peças e de desfazer movimento caso o mesmo seja inválido.
 
+### Como jogar: 
+
+- Efetue o Download ZIP através do GitHub;
+- Extraia os arquivos dentro da pasta;
+- Acesse a pasta "bin" (chess-system-java-main -> chess-system -> bin);
+- Abra um terminal de comando dentro da pasta;
+- Execute o comando "java application/Program";
+- Divirta-se! 
+<br><br>
+- ATENÇÃO: para uma melhor experiência utilize um terminal com suporte a cores como o Git Bash; 
+
 
 
 
