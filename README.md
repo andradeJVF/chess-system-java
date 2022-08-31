@@ -26,6 +26,15 @@ Métodos e Classes abstratas.<br>
 - Implementado sistema de Xeque e Xeque-mate de acordo com as jogadas possíveis no tabuleiro;
 - Implementado sistema de captura de peças e de desfazer movimento caso o mesmo seja inválido.
 
+<div style="display: flex;">
+<img src="https://i.imgur.com/fJpbViZ.jpg">
+<img src="https://i.imgur.com/D08RMnp.jpg">
+<img src="https://i.imgur.com/Xe6FJAB.jpg">
+<img src="https://i.imgur.com/zQNJiYX.jpg">
+<img src="https://i.imgur.com/Q2s9ast.jpg">
+<img src="https://i.imgur.com/deBcIu2.jpg">
+</div>
+
 #### Observação:
 O projeto não possui uma interface gráfica, então para jogar é preciso rodar o programa através de um terminal de comando. Siga as dicas abaixo ;)
 
