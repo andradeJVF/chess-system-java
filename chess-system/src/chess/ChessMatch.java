@@ -83,7 +83,7 @@ public class ChessMatch {
 
 		if (testCheck(currentPlayer)) {
 			undoMove(source, target, capturedPiece);
-			throw new ChessException("You can't put yourself in check");
+			throw new ChessException("\nYou can't put yourself in check");
 		}
 
 		ChessPiece movedPiece = (ChessPiece) board.piece(target);
@@ -118,7 +118,7 @@ public class ChessMatch {
 
 	public ChessPiece replacePromotedPiece(String type) {
 		if (promoted == null) {
-			throw new IllegalStateException("There is no piece to be promoted.");
+			throw new IllegalStateException("\nThere is no piece to be promoted.");
 		}
 
 		if (!type.equals("B") && !type.equals("N") && !type.equals("R") && !type.equals("Q")) {
@@ -132,7 +132,7 @@ public class ChessMatch {
 		ChessPiece newPiece = newPiece(type, promoted.getColor());
 		board.placePiece(newPiece, pos);
 		piecesOnTheBoard.add(newPiece);
-		
+
 		return newPiece;
 	}
 
@@ -239,19 +239,19 @@ public class ChessMatch {
 
 	private void validateSourcePosition(Position position) {
 		if (!board.thereIsAPiece(position)) {
-			throw new ChessException("There is no piece on source position");
+			throw new ChessException("\nThere is no piece on source position");
 		}
 		if (currentPlayer != ((ChessPiece) board.piece(position)).getColor()) {
-			throw new ChessException("The chosen piece is not yours");
+			throw new ChessException("\nThe chosen piece is not yours");
 		}
 		if (!board.piece(position).isThereAnyPossibleMove()) {
-			throw new ChessException("There is no possible moves for the chosen piece");
+			throw new ChessException("\nThere is no possible moves for the chosen piece");
 		}
 	}
 
 	private void validateTargetPosition(Position source, Position target) {
 		if (!board.piece(source).possibleMove(target)) {
-			throw new ChessException("The chosen piece can't move to target position");
+			throw new ChessException("\nThe chosen piece can't move to target position");
 		}
 	}
 
@@ -272,7 +272,7 @@ public class ChessMatch {
 				return (ChessPiece) p;
 			}
 		}
-		throw new IllegalStateException("There is no " + color + " king on the board");
+		throw new IllegalStateException("\nThere is no " + color + " king on the board");
 	}
 
 	private boolean testCheck(Color color) {
