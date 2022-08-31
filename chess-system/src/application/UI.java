@@ -58,7 +58,9 @@ public class UI {
 		if (!chessMatch.getCheckMate()) {
 			System.out.println("Waiting player: " + chessMatch.getCurrentPlayer());
 			if (chessMatch.getCheck()) {
+				System.out.print(ANSI_RED_BACKGROUND);
 				System.out.println("\nThe " + chessMatch.getCurrentPlayer() + " King's in CHECK!");
+				System.out.print(ANSI_RESET);
 			}
 		} else {
 			System.out.println("\nCHECKMATE!");
